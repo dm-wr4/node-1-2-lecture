@@ -13,5 +13,8 @@ app.get('/test', (req, res) => {
 
 app.get('/api/users', usersCtrl.getAllUsers)
 app.get('/api/users/:id', usersCtrl.getUserById)
+app.post('/api/users', usersCtrl.addUser)
+app.put('/api/users/:id', usersCtrl.editUser)
+app.delete('/api/users/:id', usersCtrl.deleteUser)
 
 app.listen(SERVER_PORT, () => console.log(`Listening on port ${SERVER_PORT}`))
